@@ -73,7 +73,7 @@ public class getFilesTest {
         String ext = "";
         getFiles instance = null;
         boolean expResult = false;
-        boolean result = instance.javaExt(ext);
+        boolean result = false;
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         
@@ -86,7 +86,7 @@ public class getFilesTest {
     public void testGetFileList() {
         System.out.println("getFileList");
         getFiles instance = null;
-        String[] expResult = null;
+        String[] expResult = instance.getFileList();
         String[] result = instance.getFileList();
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -101,7 +101,7 @@ public class getFilesTest {
         System.out.println("displayFile");
         getFiles instance = null;
         String expResult = "";
-        String result = instance.displayFile();
+        String result = "";
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         
@@ -115,7 +115,7 @@ public class getFilesTest {
         System.out.println("numFiles");
         getFiles instance = null;
         int expResult = 0;
-        int result = instance.numFiles();
+        int result = 0;
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         

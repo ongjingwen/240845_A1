@@ -12,25 +12,28 @@ import countIssue.countIssue;
 import readFiles.getFiles;
 
 public class STIW3054ASGI {
+
     static getFiles folder;
     static countIssue countingIssue = new countIssue();
-    
+
     public static void main(String[] args) {
 
-     Scanner sc=new Scanner(System.in);  
+        String currentPath = (System.getProperty("user.dir"));
+        String path = (currentPath.substring(0, currentPath.lastIndexOf('\\') + 1));
 
-     System.out.println("Enter the Path for Directory/Folder Name");  
-     String Directory=sc.nextLine(); 
-     System.out.println("Your Directory/folder is :"+Directory);
+        Scanner sc = new Scanner(System.in);
 
-        folder = new getFiles(Directory);
+        System.out.println("Enter Directory/Folder Name");
+        String Directory = sc.nextLine();
+        String fullPath = path + Directory + "\\src";
+
+        folder = new getFiles(fullPath);
         int noFile = folder.numFiles();
         int noIssue = folder.issues.getIssue();
-        
+
         System.out.println("Number of Java Files = " + noFile);
         System.out.println("Number of Issue = " + noIssue);
-     
-     
-     }
-    
- }
+
+    }
+
+}

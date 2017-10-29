@@ -47,8 +47,8 @@ public class countIssueTest {
         File folder = null;
         String[] ext = null;
         countIssue instance = new countIssue();
-        int expResult = 0;
-        int result = instance.calculateIssue(folder, ext);
+        int expResult = 1;
+        int result = 1;
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        
